@@ -1,0 +1,111 @@
+.sidebar-link {
+    color: var(--icon-color);
+    text-decoration: none;
+    margin-left: 10px; /* Adjust spacing from icon */
+  }
+  
+  .sidebar-link:hover {
+    text-decoration: underline;
+    color: var(--text-color-hover);
+  }
+
+
+  /* Align tips-page text with the golden line */
+.tips-page {
+    margin-left: calc((100% - 70%) / 2); /* Match the alignment of the golden line */
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .tips-page h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .tips-page p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+
+/* Dynamic Card Section */
+.three-container-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 70%; /* Fixed container size */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Card Styling */
+  .card {
+    flex: 1 1 calc(25% - 20px); /* Default: 4 cards per row (25% width minus gaps) */
+    max-width: calc(25% - 20px); /* Ensure cards don't exceed their width */
+    height: 350px; /* Fixed height for uniformity */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff; /* Card background color */
+  }
+  
+  /* Card Image */
+  .card-image {
+    width: 100%;
+    height: 200px; /* Allocate fixed height for images */
+    object-fit: cover; /* Ensure images fit within the defined space */
+    border-bottom: 1px solid #e0e0e0; /* Optional: Separate image from text */
+  }
+  
+  /* Card Content */
+  .card-content {
+    padding: 16px;
+    flex-grow: 1; /* Ensure content takes available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    text-align: center;
+  }
+  
+  .card-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 8px;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 1200px) {
+    .card {
+      flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+      max-width: calc(33.33% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex: 1 1 calc(100% - 20px); /* 1 card per row */
+      max-width: calc(100% - 20px);
+    }
+  }

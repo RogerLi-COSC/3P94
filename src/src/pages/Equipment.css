@@ -1,0 +1,44 @@
+.equipment-page {
+    margin-left: calc((100% - 70%) / 2); /* Match the alignment of the golden line */
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .equipment-page h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .equipment-page p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .header-container {
+    height: auto; /* Let the content determine the height */
+    min-height: 25vh; /* Minimum height for better spacing */
+    margin-top: 20px;
+    width: 70%; /* Full width */
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+    justify-content: center; /* Center content horizontally */
+    padding: 20px; /* Add padding for text spacing */
+    background: 
+      linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), /* Light white gradient */
+      url('../knife2.webp') center/cover no-repeat; /* Different background image */
+    box-sizing: border-box; /* Include padding in dimensions */
+    position: relative; /* Enable positioning for text */
+    border-radius: 8px; /* Rounded corners */
+    margin: 0 auto; /* Horizontally center the container */
+  }
+  
+  /* Styling for text inside the header-container */
+  .header-container .text-content {
+    color: #fff; /* White text for better contrast */
+    font-size: calc(1.2rem + 0.5vw); /* Responsive font size */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Add spacing from the bottom of the container */
+  }
+  
+  

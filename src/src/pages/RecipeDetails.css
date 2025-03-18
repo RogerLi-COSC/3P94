@@ -1,0 +1,27 @@
+/* Recipe Details Page */
+.recipe-details-page {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #dbca7f;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  ul, ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  h1, h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  

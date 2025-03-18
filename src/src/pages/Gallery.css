@@ -1,0 +1,56 @@
+/* Gallery Container */
+.gallery-container {
+  width: 70%; /* Match the width of the logo-container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  border: 2px solid #dbca7f; /* Golden border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  overflow: hidden; /* Hide overflowing content */
+  height: 800px; /* Fixed height for the gallery */
+  display: flex; /* Horizontal layout for three columns */
+  gap: 10px; /* Spacing between columns */
+}
+
+/* Scroll Columns */
+.scroll-column {
+  flex: 1; /* Equal width for each column */
+  display: flex;
+  flex-direction: column; /* Vertical arrangement */
+  gap: 20px; /* Space between cards */
+  animation: scroll 30s linear infinite; /* Infinite vertical scroll */
+  will-change: transform; /* Optimize for GPU rendering */
+}
+
+/* Gallery Card */
+.gallery-card {
+  border: 2px solid #000; /* Black border for cards */
+  overflow: hidden; /* Prevent overflow of images */
+  background-color: #fff; /* White background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* Maintain fixed height for cards */
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Gallery Image */
+.gallery-image {
+  width: 100%; /* Image fits inside the card */
+  height: 100%; /* Maintain full height */
+  object-fit: cover; /* Scale images proportionally to fit */
+}
+
+/* Speed Variations for Columns */
+.scroll-column:nth-child(1) {
+  animation: scroll 35s linear infinite; /* Moderate speed */
+}
+
+.scroll-column:nth-child(2) {
+  animation: scroll 50s linear infinite; /* Slower scroll */
+}
+
+.scroll-column:nth-child(3) {
+  animation: scroll 75s linear infinite; /* Slowest scroll */
+}

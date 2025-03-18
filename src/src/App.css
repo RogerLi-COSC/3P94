@@ -1,0 +1,272 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+/* Main container */
+.main-container {
+  display: flex;
+  justify-content: center; /* Center coffee container horizontally */
+  height: 100%; /* Full height of the viewport */
+
+}
+
+/* Sidebar */
+.sidebar {
+  flex-shrink: 0;
+  height: 100%; /* Ensure it covers the full height */
+}
+
+/* Content area */
+.content {
+  flex-grow: 1; /* Fill the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align coffee container to the top */
+  padding: 20px;
+  background-color: #ffffff; /* Optional */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Coffee container */
+.coffee-container {
+  height: auto; /* Let the content determine the height */
+  min-height: 25vh; /* Minimum height for better spacing */
+  margin-top: 20px;
+  width: 70%; /* 80% of the page width */
+  display: flex;
+  align-items: center; /* Center content vertically within the container */
+  justify-content: flex-end; /* Align text to the right */
+  padding: 20px; /* Internal padding for spacing */
+  margin: 0 auto; /* Horizontally center the container */
+  background: linear-gradient(to right, rgba(105, 105, 105, 0.001), rgba(255, 255, 255, 0.5)), 
+              url('./coffee.jpg') center/cover no-repeat; /* Gradient + image */
+  box-sizing: border-box; /* Include padding in dimensions */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+/* Text overlay */
+.coffee-container .text-overlay {
+  color: #000000; /* Text color */
+  font-size: calc(1rem + 1vw); /* Scale text size with viewport width */
+  text-align: right; /* Align text to the right */
+  line-height: 1.4; /* Line height for better spacing */
+  z-index: 1; /* Ensure text is above gradient/image */
+  padding: 10%;
+}
+
+/* Add additional styles for the lower section if needed */
+.lower-content {
+  margin-left: calc((100% - 70%) / 2); /* Match the alignment of the golden line */
+  margin-top: 20px;
+  text-align: left;
+  flex-grow: 1; /* Fill the remaining space below the coffee container */
+  width: 100%;
+  background-color: #fff; /* Optional background */
+  text-wrap:inherit;
+}
+
+/* Logo container */
+.logo-container {
+  width: 70%; /* Same width as the coffee container */
+  margin: 20px auto; /* Horizontally center with spacing */
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Center the logo */
+  align-items: center; /* Center vertically */
+  border-radius: 8px; /* Rounded corners for the container */
+  position: relative; /* Enable positioning for the line */
+}
+
+/* Golden line */
+.logo-container::after {
+  content: '';
+  display: block;
+  width: 100%; /* Match the width of the logo container */
+  height: 4px; /* Thickness of the line */
+  background-color: #DBCA7F; /* Golden color */
+  position: absolute;
+  bottom: -10px; /* Position the line slightly below the container */
+  left: 0;
+}
+
+
+/* Logo image */
+.logo-container img{
+  max-width: 200px; /* Ensure the logo scales within the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Tip container */
+.tip-container {
+  height: auto; /* Let the content determine the height */
+  min-height: 25vh; /* Minimum height for better spacing */
+  margin-top: 20px;
+  width: 70%; /* Full width */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: flex-end; /* Align text to the right */
+  padding: 20px; /* Add padding for text spacing */
+  background: url('./knife2.webp') center/cover no-repeat; /* Different background image */
+  box-sizing: border-box; /* Include padding in dimensions */
+  position: relative; /* Enable positioning for text */
+  border-radius: 8px; /* Rounded corners */
+  margin: 0 auto; /* Horizontally center the container */
+  margin-top: 20px;
+}
+
+.tip-container button {
+  margin-right: 20px + 10%; /* Add spacing to the right of the button */
+}
+
+/* Discover container */
+.discover-container {
+  height: auto; /* Let the content determine the height */
+  min-height: 25vh; /* Minimum height for better spacing */
+  margin-top: 20px;
+  width: 70%; /* Full width */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: flex-end; /* Align text to the right */
+  padding: 20px; /* Add padding for text spacing */
+  background: url('./knife3.webp') center/cover no-repeat; /* Different background image */
+  box-sizing: border-box; /* Include padding in dimensions */
+  position: relative; /* Enable positioning for text */
+  border-radius: 8px; /* Rounded corners */
+  margin: 0 auto; /* Horizontally center the container */
+  margin-top: 20px;
+}
+
+.discover-container button {
+  margin-right: 20px + 10%; /* Add spacing to the right of the button */
+}
+
+/* Equipment container */
+.equipment-container {
+  height: auto; /* Let the content determine the height */
+  min-height: 25vh; /* Minimum height for better spacing */
+  margin-top: 20px;
+  width: 70%; /* Full width */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: flex-end; /* Align text to the right */
+  padding: 20px; /* Add padding for text spacing */
+  background: url('./equipment.png') center/cover no-repeat; /* Different background image */
+  box-sizing: border-box; /* Include padding in dimensions */
+  position: relative; /* Enable positioning for text */
+  border-radius: 8px; /* Rounded corners */
+  margin: 0 auto; /* Horizontally center the container */
+  margin-top: 20px;
+}
+
+.equipment-container button {
+  margin-right: 20p + 10%; /* Add spacing to the right of the button */
+}
+
+/* Three-Container Section */
+.three-container-section {
+  display: flex; /* Align children horizontally */
+  justify-content: space-between; /* Space out the containers */
+  align-items: center; /* Vertically center contents */
+  padding: 20px; /* Add padding to the section */
+  background-color: #f8f8f8; /* Light background for contrast */
+  gap: 20px; /* Add spacing between containers */
+}
+
+/* Sub-Container Styles */
+.sub-container {
+  flex: 1; /* Make all containers equal width */
+  height: 300px; /* Set a fixed height */
+  display: flex; /* Enable child centering */
+  justify-content: center; /* Center horizontally */
+  align-items: flex-end; /* Align button to the bottom */
+  border: 2px solid #dbca7f; /* Add a gold border */
+  border-radius: 8px; /* Add rounded corners */
+  background-size: cover; /* Cover the entire container */
+  background-repeat: no-repeat; /* Avoid repeated images */
+  background-position: center; /* Center the background image */
+  overflow: hidden; /* Prevent content overflow */
+  position: relative; /* Enable absolute positioning inside */
+}
+
+/* Add Background Images to Each Container */
+.sub-container:nth-child(1) {
+  background-image: url('./cards.jpg'); /* Replace with your Recipes image path */
+}
+
+.sub-container:nth-child(2) {
+  background-image: url('./news.jpg'); /* Replace with your News image path */
+}
+
+.sub-container:nth-child(3) {
+  background-image: url('./gallery.png'); /* Replace with your Gallery image path */
+}
+
+/* Button Wrapper */
+.button-wrapper {
+  position: absolute; /* Position relative to the container */
+  bottom: 20px; /* Add spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center the button horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay effect */
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* Centered Button */
+.centered-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: rgba(219, 202, 167, 0.9); /* Gold button color */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.centered-button:hover {
+  transform: scale(1.05);
+  background-color: rgba(219, 202, 167, 1); /* Slightly brighter on hover */
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

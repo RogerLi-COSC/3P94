@@ -1,0 +1,65 @@
+.recipe-page {
+    margin-left: calc((100% - 70%) / 2); /* Match the alignment of the golden line */
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .recipe-page h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-page p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Input Container */
+.input-container {
+    margin: 20px auto;
+    width: 70%; /* Match with the card container width */
+    padding: 20px;
+    border: 2px solid #dbca7f; /* Golden border */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .input-container h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Recipe Form */
+  .recipe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .recipe-form input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .recipe-form input[type="file"] {
+    padding: 5px;
+  }
+  
+  .recipe-form button {
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #dbca7f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recipe-form button:hover {
+    background-color: #c3b06a;
+  }
+  

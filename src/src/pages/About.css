@@ -1,0 +1,17 @@
+.about-page {
+    margin-left: calc((100% - 70%) / 2); /* Match the alignment of the golden line */
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .about-page h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .about-page p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
