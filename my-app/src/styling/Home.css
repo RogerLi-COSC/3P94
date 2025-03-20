@@ -1,62 +1,99 @@
 /* Home.css */
 .home-container {
-    padding-top: 80px;
-    background-color: #f8f8f8;
-  }
-  
-  .search-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .search-bar {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .filter-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
+  padding-top: 80px;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filter-buttons button {
+  border: 2px solid gold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+}
+
+/* Main Layout */
+.main-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Map Section */
+.map-container {
+  flex: 1;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Listings Section */
+.listings-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .main-layout {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-  }
-  
-  .map-container {
-    flex: 1;
-    height: 600px;
-  }
-  
-  .listings-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .listings-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  @media (max-width: 1024px) {
-    .main-layout {
       flex-direction: column;
-    }
-    .map-container,
-    .listings-container {
-      width: 100%;
-    }
-    .listings-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
   }
-  
+  .map-container,
+  .listings-container {
+      width: 100%;
+  }
+  .listings-grid {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <Navbar />
-      
+
       {/* Search Bar Section */}
       <section className="search-section">
         <div className="search-bar">
@@ -23,7 +23,7 @@ export default function Home() {
           <button>Filters</button>
         </div>
       </section>
-      
+
       {/* Main Layout Section */}
       <section className="main-layout">
         {/* Map Section */}
@@ -37,7 +37,7 @@ export default function Home() {
             loading="lazy"
           ></iframe>
         </div>
-        
+
         {/* Property Listings Section */}
         <div className="listings-container">
           <h2>Viewing 6 Homes for Sale</h2>
