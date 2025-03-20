@@ -77,7 +77,7 @@ export default function Home() {
               details="3 Bedrooms • 4 Bathrooms" 
             />
             <PropertyCard 
-              image="Images/house6.jpg" 
+              image="/Images/house6.jpg" 
               title="Mountain Retreat" 
               location="Whistler, BC, Canada" 
               price="$5,600,000" 
