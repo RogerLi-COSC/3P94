@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
+import PropertyCard from "../components/PropertyCard.jsx";
 import "../styling/Home.css";
 
 export default function Home() {
@@ -23,36 +24,67 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Property Listings Section */}
-      <section className="listings-section">
-        <h2>Viewing 16 of 16 Homes for Sale in Niagara</h2>
+      {/* Main Layout Section */}
+      <section className="main-layout">
+        {/* Map Section */}
+        <div className="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.646040949852!2d-79.09376568450208!3d43.089557979145116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d344529b5b5b15%3A0x4d1e3d8e5b5e5e3!2sNiagara%20Falls!5e0!3m2!1sen!2sca!4v1617722957757!5m2!1sen!2sca"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        
+        {/* Property Listings Section */}
         <div className="listings-container">
-          <div className="listing-card">
-            <img src="/images/property1.jpg" alt="Luxury Home" />
-            <h3>472 Gage St</h3>
-            <p>Niagara On The Lake, ON, L0S 1J0 Canada</p>
-            <span className="price">$6,942,991</span>
-            <p>5 Bedrooms • 9 Bathrooms</p>
-          </div>
-          <div className="listing-card">
-            <img src="/images/property2.jpg" alt="Land Property" />
-            <h3>N/A Dorchester Road</h3>
-            <p>Niagara Falls, ON, L2G 7W7 Canada</p>
-            <span className="price">$2,232,922</span>
+          <h2>Viewing 6 Homes for Sale</h2>
+          <div className="listings-grid">
+            <PropertyCard 
+              image="/images/property1.jpg" 
+              title="472 Gage St" 
+              location="Niagara On The Lake, ON, L0S 1J0 Canada" 
+              price="$6,942,991" 
+              details="5 Bedrooms • 9 Bathrooms" 
+            />
+            <PropertyCard 
+              image="/images/property2.jpg" 
+              title="N/A Dorchester Road" 
+              location="Niagara Falls, ON, L2G 7W7 Canada" 
+              price="$2,232,922" 
+            />
+            <PropertyCard 
+              image="/images/property3.jpg" 
+              title="Luxury Villa" 
+              location="Toronto, ON, Canada" 
+              price="$4,500,000" 
+              details="4 Bedrooms • 6 Bathrooms" 
+            />
+            <PropertyCard 
+              image="/images/property4.jpg" 
+              title="Beachfront Estate" 
+              location="Vancouver, BC, Canada" 
+              price="$7,800,000" 
+              details="6 Bedrooms • 7 Bathrooms" 
+            />
+            <PropertyCard 
+              image="/images/property5.jpg" 
+              title="Downtown Penthouse" 
+              location="Montreal, QC, Canada" 
+              price="$3,200,000" 
+              details="3 Bedrooms • 4 Bathrooms" 
+            />
+            <PropertyCard 
+              image="/images/property6.jpg" 
+              title="Mountain Retreat" 
+              location="Whistler, BC, Canada" 
+              price="$5,600,000" 
+              details="4 Bedrooms • 5 Bathrooms" 
+            />
           </div>
         </div>
-      </section>
-      
-      {/* Map Section */}
-      <section className="map-section">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.646040949852!2d-79.09376568450208!3d43.089557979145116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d344529b5b5b15%3A0x4d1e3d8e5b5e5e3!2sNiagara%20Falls!5e0!3m2!1sen!2sca!4v1617722957757!5m2!1sen!2sca"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
       </section>
     </div>
   );

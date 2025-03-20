@@ -1,11 +1,12 @@
 import React from 'react';
-//import Navbar from './components/Navbar.jsx';
-import Home from './page/Home.jsx'; // Ensure capitalization matches the actual file name
+import Navbar from './components/Navbar.jsx';
+import Home from './page/Home.jsx';
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
+      <Navbar />
       <Home />
     </div>
   );
