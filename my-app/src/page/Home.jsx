@@ -43,41 +43,41 @@ export default function Home() {
           <h2>Viewing 6 Homes for Sale</h2>
           <div className="listings-grid">
             <PropertyCard 
-              image="/images/property1.jpg" 
+              image="/Images/house1.jpg" 
               title="472 Gage St" 
               location="Niagara On The Lake, ON, L0S 1J0 Canada" 
               price="$6,942,991" 
               details="5 Bedrooms • 9 Bathrooms" 
             />
             <PropertyCard 
-              image="/images/property2.jpg" 
+              image="/Images/house2.jpg" 
               title="N/A Dorchester Road" 
               location="Niagara Falls, ON, L2G 7W7 Canada" 
               price="$2,232,922" 
             />
             <PropertyCard 
-              image="/images/property3.jpg" 
+              image="/Images/house3.jpg" 
               title="Luxury Villa" 
               location="Toronto, ON, Canada" 
               price="$4,500,000" 
               details="4 Bedrooms • 6 Bathrooms" 
             />
             <PropertyCard 
-              image="/images/property4.jpg" 
+              image="/Images/house4.jpg" 
               title="Beachfront Estate" 
               location="Vancouver, BC, Canada" 
               price="$7,800,000" 
               details="6 Bedrooms • 7 Bathrooms" 
             />
             <PropertyCard 
-              image="/images/property5.jpg" 
+              image="/Images/house5.jpg" 
               title="Downtown Penthouse" 
               location="Montreal, QC, Canada" 
               price="$3,200,000" 
               details="3 Bedrooms • 4 Bathrooms" 
             />
             <PropertyCard 
-              image="/images/property6.jpg" 
+              image="/Images/house6.jpg" 
               title="Mountain Retreat" 
               location="Whistler, BC, Canada" 
               price="$5,600,000" 
