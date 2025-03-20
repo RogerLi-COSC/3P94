@@ -6,7 +6,7 @@ const Profile = () => {
     name: 'Michael Scott',
     email: 'MichaelScott@gmail.com',
     phone: '(519) 456-7235',
-    address: '68 Luxury Ave, Beverly Hills, CA',
+    address: '68 Clifton Hill, Niagara Falls, ON',
     bio: 'Passionate about real estate investments and rental properties.',
     profileCompletion: 80, // Percentage completion
   });
