@@ -1,65 +1,55 @@
-import React, { useState, useEffect, useRef } from 'react';
-import '../styling/Messages.css';
+import React from "react";
+import "../styling/MessagesList.css";
 
-const Messages = () => {
-  const [messages, setMessages] = useState([
-    { id: 1, sender: 'Jimmy', content: 'Hi, is the apartment still available?', timestamp: '10:05 AM' },
-    { id: 2, sender: 'Gilmore', content: 'Can we schedule a visit for tomorrow?', timestamp: '10:07 AM' },
-    { id: 3, sender: 'Alice', content: 'I’d like to know more about the property.', timestamp: '10:10 AM' },
-    { id: 4, sender: 'You', content: 'Yes, it is still available!', timestamp: '10:12 AM' },
-    { id: 5, sender: 'Mark', content: 'What’s the rental price?', timestamp: '10:15 AM' },
-  ]);
+const conversations = [
+  { id: 1, name: "Lebron James", message: "Sent just now.", time: "4s", avatar: "https://via.placeholder.com/50", unread: true },
+  { id: 2, name: "James Bond", message: "Are you available tomorrow?", time: "37s", avatar: "https://via.placeholder.com/50" },
+  { id: 3, name: "Gilmore Thomas", message: "Thanks!", time: "1m", avatar: "https://via.placeholder.com/50" },
+  { id: 4, name: "Chris Paul", message: "Sent 1m ago.", time: "5m", avatar: "https://via.placeholder.com/50" },
+  { id: 5, name: "Operah Winfree", message: "Okay!", time: "14m", avatar: "https://via.placeholder.com/50", unread: true },
+  { id: 6, name: "Michelle Obama", message: "Liked a message.", time: "23m", avatar: "https://via.placeholder.com/50" },
+  { id: 7, name: "Thomas Edison", message: "I loved the house.", time: "1h", avatar: "https://via.placeholder.com/50" },
+  { id: 8, name: "Tim Bones", message: "Meeting at 3PM confirmed.", time: "3h", avatar: "https://via.placeholder.com/50" },
+  { id: 9, name: "Kanye West", message: "Sent you an attachment.", time: "56m", avatar: "https://via.placeholder.com/50", unread: true },
+  { id: 10, name: "Indiana Jones", message: "Call me when you're free.", time: "2m", avatar: "https://via.placeholder.com/50" },
+  { id: 11, name: "Nolan Winter", message: "Sent 6h ago.", time: "2h", avatar: "https://via.placeholder.com/50" },
+  { id: 12, name: "Kevin He", message: "Thanks for your help!", time: "4d", avatar: "https://via.placeholder.com/50" },
+];
 
-  const [newMessage, setNewMessage] = useState('');
-  const messagesEndRef = useRef(null);
-
-  // Auto-scroll to latest message
-  useEffect(() => {
-    setTimeout(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
-  }, [messages]);
-
-  // Handle sending a new message
-  const handleSendMessage = () => {
-    if (newMessage.trim()) {
-      const newMsg = {
-        id: messages.length + 1,
-        sender: 'You',
-        content: newMessage.trim(),
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      };
-      setMessages([...messages, newMsg]);
-      setNewMessage('');
-    }
-  };
-
+const MessagesList = () => {
   return (
-    <div className="messages-page">
-      <h1>Messages</h1>
-      <div className="chat-box">
-        <ul>
-          {messages.map((msg) => (
-            <li key={msg.id} className={msg.sender === 'You' ? 'sent' : 'received'}>
-              <div className="chat-bubble">
-                <strong>{msg.sender}:</strong> {msg.content}
-                <span className="timestamp">{msg.timestamp}</span>
+    <div className="messages-list">
+      {/* Header */}
+      <div className="messages-header">
+        <h2>modeandkids</h2>
+        <button className="add-button">+</button>
+      </div>
+
+      {/* Search Bar */}
+      <div className="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+
+      {/* Messages */}
+      <ul className="messages-container">
+        {conversations.map((chat) => (
+          <li key={chat.id} className="message-item">
+            <img src={chat.avatar} alt={chat.name} className="avatar" />
+            <div className="message-info">
+              <div className="name-time">
+                <span className="name">{chat.name}</span>
+                {chat.time && <span className="time">{chat.time}</span>}
               </div>
-            </li>
-          ))}
-          <div ref={messagesEndRef} />
-        </ul>
-      </div>
-      <div className="input-container">
-        <input
-          type="text"
-          placeholder="Type a message..."
-          value={newMessage}
-          onChange={(e) => setNewMessage(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()} // Press Enter to send
-        />
-        <button onClick={handleSendMessage}>Send</button>
-      </div>
+              <div className="message-preview">
+                {chat.message}
+                {chat.unread && <span className="unread-dot"></span>}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-export default Messages;
+export default MessagesList;
