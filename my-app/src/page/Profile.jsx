@@ -14,10 +14,9 @@ const Profile = () => {
 
   return (
     <div className="profile-page">
-      <h1>Profile Page</h1>
       <div className="profile-info">
         <img
-          src="https://via.placeholder.com/150/FFD700/FFFFFF?text=Profile+Pic"
+          src="https://via.placeholder.com/150/FFD700/FFFFFF?text=MS"
           alt="Profile"
         />
         <h2><FaUser /> {profile.name}</h2>
@@ -40,6 +39,7 @@ const Profile = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Profile;
