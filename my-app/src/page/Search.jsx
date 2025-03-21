@@ -1,83 +1,92 @@
 import React, { useState } from "react";
+import "../styling/ProductListings.css"; 
 
-function App() {
-  const [newProperty, setNewProperty] = useState({
-    price: "",
-    bed: "",
-    bath: "",
-    comment: "",
-    image: null,
-  });
 
-  const [properties, setProperties] = useState([]);
+const PropertyListings = () => {
+  const [filters, setFilters] = useState({ search: "", type: "For Sale" });
+  const [properties, setProperties] = useState([
+    {
+      id: 1,
+      image: "/Images/house1.jpg",
+      price: "$1,200,000",
+      bed: 4,
+      bath: 3,
+      address: "123 Luxury St, Toronto, ON",
+      type: "For Sale",
+    },
+    {
+      id: 2,
+      image: "/Images/house3.jpg",
+      price: "$950,000",
+      bed: 3,
+      bath: 2,
+      address: "45 Prestige Ave, Vancouver, BC",
+      type: "For Sale",
+    },
+    {
+      id: 3,
+      image: "h/Images/house6.jpg",
+      price: "$3,500,000",
+      bed: 5,
+      bath: 4,
+      address: "77 Skyview, Montreal, QC",
+      type: "For Rent",
+    },
+  ]);
 
-  const handleInputChange = (e) => {
-    setNewProperty({ ...newProperty, [e.target.name]: e.target.value });
+  const handleSearchChange = (e) => {
+    setFilters({ ...filters, search: e.target.value });
   };
 
-  const handleImageChange = (e) => {
-    setNewProperty({ ...newProperty, image: e.target.files[0] });
+  const handleTypeChange = (type) => {
+    setFilters({ ...filters, type });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setProperties([...properties, newProperty]);
-    setNewProperty({ price: "", bed: "", bath: "", comment: "", image: null });
-  };
+  const filteredProperties = properties.filter(
+    (property) =>
+      property.type === filters.type &&
+      property.address.toLowerCase().includes(filters.search.toLowerCase())
+  );
 
   return (
-    <div>
-      <h1>Property Listings</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="property-listings-container">
+      <div className="filter-bar">
         <input
           type="text"
-          name="price"
-          value={newProperty.price}
-          onChange={handleInputChange}
-          placeholder="Price"
+          placeholder="Search locations..."
+          value={filters.search}
+          onChange={handleSearchChange}
         />
-        <input
-          type="number"
-          name="bed"
-          value={newProperty.bed}
-          onChange={handleInputChange}
-          placeholder="Beds"
-        />
-        <input
-          type="number"
-          name="bath"
-          value={newProperty.bath}
-          onChange={handleInputChange}
-          placeholder="Baths"
-        />
-        <textarea
-          name="comment"
-          value={newProperty.comment}
-          onChange={handleInputChange}
-          placeholder="Add a comment"
-        ></textarea>
-        <input type="file" onChange={handleImageChange} />
-        <button type="submit">Add Property</button>
-      </form>
-      <div>
-        {properties.map((property, index) => (
-          <div key={index}>
-            {property.image && (
-              <img
-                src={URL.createObjectURL(property.image)}
-                width="200"
-                alt="property"
-              />
-            )}
-            <p>
-              ${property.price} - {property.bed} Bed, {property.bath} Bath
-            </p>
-            <p>{property.comment}</p>
+        <button
+          className={filters.type === "For Sale" ? "active" : ""}
+          onClick={() => handleTypeChange("For Sale")}
+        >
+          For Sale
+        </button>
+        <button
+          className={filters.type === "For Rent" ? "active" : ""}
+          onClick={() => handleTypeChange("For Rent")}
+        >
+          For Rent
+        </button>
+        <button>Filters</button>
+        <button>Save Search</button>
+      </div>
+
+      <div className="property-grid">
+        {filteredProperties.map((property) => (
+          <div key={property.id} className="property-card">
+            <img src={property.image} alt="Property" />
+            <div className="property-info">
+              <h3>{property.price}</h3>
+              <p>{property.bed} Bed • {property.bath} Bath</p>
+              <p>{property.address}</p>
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
-export default App;
+export default PropertyListings;

@@ -1,59 +1,89 @@
-.product-listings {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
+.property-listings-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-bar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+.filter-bar button {
+  padding: 10px 15px;
+  border: 2px solid gold;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-bar button.active {
+  background-color: gold;
+  color: black;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.property-card:hover {
+  transform: scale(1.02);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.property-info h3 {
+  margin: 10px 0;
+  color: #cbb26a;
+}
+
+.property-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .product-card {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    border-radius: 8px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: var(--gold-shadow);
-    text-align: center;
+
+  .filter-bar input {
+    width: 100%;
   }
-  
-  .product-card h3 {
-    margin-bottom: 10px;
+
+  .property-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  
-  .product-card p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  
-  .product-card button {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: var(--gold-shadow);
-  }
-  
-  .product-card button:hover {
-    background: var(--hover-color);
-  }
-  
-  .product-filter {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .product-filter select {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    width: 200px;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: var(--gold-shadow);
-  }
-  
+}
