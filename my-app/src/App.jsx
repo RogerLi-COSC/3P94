@@ -6,6 +6,7 @@ import Search from "./page/Search.jsx";
 import Agents from "./page/Agents.jsx";
 import Messages from "./page/Messages.jsx";
 import Profile from "./page/Profile.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/messages" element={<Messages />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
