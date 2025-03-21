@@ -1,91 +1,95 @@
+/* Profile Page */
 .profile-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  padding-top: 8rem;
   background-color: #1a1a1a;
-  padding: 2rem;
-  color: #fff;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-/* Profile Card */
+/* Profile Container */
+.profile-container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Profile Info */
 .profile-info {
-  background-color: #222;
-  padding: 25px;
+  background-color: #2b2b2b;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.3);
-  max-width: 450px;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+  width: 320px;
+  flex-shrink: 0;
   text-align: center;
-  border: 2px solid gold;
 }
 
-/* Profile Picture */
-.profile-info img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border: 3px solid gold;
-}
-
-/* Profile Header */
 .profile-info h2 {
   color: #ffd700;
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 }
 
-/* Profile Details */
-.profile-info p {
-  margin: 8px 0;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
+.profile-info img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
 }
 
-/* Profile Completion */
-.profile-completion {
-  margin-top: 15px;
-  font-size: 0.9rem;
+/* Saved Properties Section */
+.saved-properties {
+  flex: 1;
+  background: #2b2b2b;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+  max-width: 600px;
 }
 
-.completion-bar {
-  height: 10px;
-  background-color: #444;
-  border-radius: 6px;
-  margin-top: 5px;
-  overflow: hidden;
+.saved-properties h2 {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.completion-fill {
-  height: 100%;
-  background-color: #ffd700;
-  transition: width 0.4s ease-in-out;
+/* Property Listings */
+.property-listings {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
-/* Edit Profile Button */
-button {
-  background-color: #ffd700;
+.property-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.property-card:hover {
+  transform: scale(1.03);
+}
+
+.property-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.property-card h2 {
+  font-size: 1.2rem;
+  color: gold;
+  margin-top: 10px;
+}
+
+.property-card p {
   color: black;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  margin-top: 15px;
+  font-size: 1rem;
 }
 
-button:hover {
-  background-color: #e6c300;
-  transform: scale(1.05);
+/* Limit property card width */
+.property-card-container {
+  max-width: 400px;
 }
-
-
