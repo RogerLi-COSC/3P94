@@ -2,16 +2,42 @@
 .navbar {
     background-color: #000000; /* Black Navbar */
     color: white;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem 1rem 2rem; /* Increased top padding */
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     border-bottom: 4px solid #FFD700; /* Gold Line Under Navbar */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Language Switcher - Fully Above Navbar */
+.language-switcher {
+    position: absolute;
+    top: 1px; /* Higher positioning */
+    right: 78px; /* Moves it more to the left */
+    display: flex;
+    gap: 8px;
+}
+
+.language-switcher button {
+    background-color: transparent;
+    border: 2px solid gold;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px; /* Rounded edges */
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.language-switcher button.active {
+    background-color: gold;
+    color: black;
 }
 
 /* Navbar Container */
@@ -20,6 +46,7 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    padding-top: 1rem; /* Adds space between switcher and nav */
 }
 
 /* Logo */
@@ -36,9 +63,8 @@
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin-left: auto;
     margin-right: 3rem;
-    padding-right: 10px;
+    padding-top: 1.5rem;
 }
 
 /* Navbar Links */
@@ -70,13 +96,17 @@
 
 /* Mobile Responsive Menu */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the button on small screens */
+    }
+
     .nav-menu {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 0;
         right: 0;
-        background: #000000; /* Black Background */
+        background: #4d2020; /* Black Background */
         width: 100vw;
         height: 100vh;
         padding-top: 3rem;
@@ -87,7 +117,10 @@
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
+    /* Move the language buttons inside the menu for mobile */
+    .language-switcher {
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
     }
 }

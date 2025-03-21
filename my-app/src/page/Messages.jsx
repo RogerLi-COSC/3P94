@@ -1,5 +1,5 @@
 import React from "react";
-import "../styling/MessagesList.css";
+import "../styling/Messages.css";
 
 const conversations = [
   { id: 1, name: "Lebron James", message: "Sent just now.", time: "4s", avatar: "https://via.placeholder.com/50", unread: true },

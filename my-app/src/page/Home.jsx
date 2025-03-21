@@ -6,7 +6,6 @@ import "../styling/Home.css";
 export default function Home() {
   return (
     <div className="home-container">
-      <Navbar />
 
       {/* Search Bar Section */}
       <section className="search-section">
