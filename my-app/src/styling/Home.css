@@ -1,9 +1,11 @@
 /* Home.css */
 .home-container {
-  padding-top: 80px;
+  padding-top: 120px; /* Increased padding to prevent smothering */
   background-color: #f8f8f8;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
 
 /* Search Section */
 .search-section {
@@ -11,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin-bottom: 20px; /* Adds spacing below search bar */
 }
 
 .search-bar {
@@ -24,7 +27,10 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: white; /* Ensures search input has a white background */
+  color: black; /* Text remains readable */
 }
+
 
 .search-bar button {
   background-color: gold;

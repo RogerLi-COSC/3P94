@@ -1,6 +1,6 @@
-/* Navbar.css */
+/* Navbar Styling */
 .navbar {
-    background-color: #0a1f44;
+    background-color: #000000; /* Black Navbar */
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -11,46 +11,51 @@
     top: 0;
     left: 0;
     z-index: 1000;
-  }
-  
-  .nav-container {
+    border-bottom: 4px solid #FFD700; /* Gold Line Under Navbar */
+}
+
+/* Navbar Container */
+.nav-container {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-  }
-  
-  .nav-logo {
+}
+
+/* Logo */
+.nav-logo {
     font-size: 1.8rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
     margin-left: 2rem;
-  }
-  
-  .nav-menu {
+}
+
+/* Navigation Menu */
+.nav-menu {
     list-style: none;
     display: flex;
     gap: 2rem;
     margin-left: auto;
     margin-right: 3rem;
     padding-right: 10px;
-  }
-  
-  .nav-link {
+}
+
+/* Navbar Links */
+.nav-link {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
     font-weight: 500;
     transition: 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #cbb26a;
-  }
-  
-  /* Hamburger Menu Button */
-  .menu-toggle {
+}
+
+.nav-link:hover {
+    color: #FFD700; /* Gold Hover Effect */
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
     background: none;
     border: none;
     font-size: 1.8rem;
@@ -58,32 +63,31 @@
     cursor: pointer;
     display: none;
     position: absolute;
-    top: 20px; /* Moves it up */
-    right: 35px; /* Moves it more to the right */
+    top: 20px;
+    right: 35px;
     z-index: 1100;
-  }
-  
-  /* Mobile Menu Fix */
-  @media (max-width: 768px) {
+}
+
+/* Mobile Responsive Menu */
+@media (max-width: 768px) {
     .nav-menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: #0a1f44;
-      width: 100vw;
-      height: 100vh;
-      padding-top: 3rem;
-      text-align: center;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #000000; /* Black Background */
+        width: 100vw;
+        height: 100vh;
+        padding-top: 3rem;
+        text-align: center;
     }
-  
+
     .nav-menu.open {
-      display: flex;
+        display: flex;
     }
-  
+
     .menu-toggle {
-      display: block;
+        display: block;
     }
-  }
-  
+}
