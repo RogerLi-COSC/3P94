@@ -99,14 +99,17 @@
     .menu-toggle {
         display: block; /* Show the button on small screens */
     }
-
+    
+    .navbar {
+        padding: 0.5rem 0.5rem 0.5rem 1rem; /* Reduced padding */
+    }
     .nav-menu {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 0;
         right: 0;
-        background: #4d2020; /* Black Background */
+        background: #000000; /* Black Background */
         width: 100vw;
         height: 100vh;
         padding-top: 3rem;
@@ -120,7 +123,6 @@
     /* Move the language buttons inside the menu for mobile */
     .language-switcher {
         position: static;
-        margin-top: 10px;
         justify-content: center;
     }
 }
